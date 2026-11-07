@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1117" />
+      <stop offset="50%" stop-color="#141824" />
+      <stop offset="100%" stop-color="#0a0c10" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1f2c" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#10131a" stop-opacity="0.9" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <!-- Ambient Light -->
+  <circle cx="400" cy="220" r="180" fill="#f59e0b" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- Window Frame -->
+  <g transform="translate(100, 60)">
+    <rect width="600" height="380" rx="14" fill="url(#cardBg)" stroke="rgba(251, 191, 36, 0.25)" stroke-width="1.5"/>
+    
+    <!-- Titlebar -->
+    <rect width="600" height="42" rx="14" fill="#141720"/>
+    <rect y="32" width="600" height="10" fill="#141720"/>
+    <circle cx="24" cy="21" r="5" fill="#ef4444"/>
+    <circle cx="42" cy="21" r="5" fill="#f59e0b"/>
+    <circle cx="60" cy="21" r="5" fill="#10b981"/>
+    <text x="300" y="26" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" font-weight="600">SkillGap AI — Desktop Engine (Java JDK 21)</text>
+
+    <!-- Sidebar in UI -->
+    <rect x="20" y="60" width="160" height="300" rx="8" fill="#10131b" stroke="rgba(255,255,255,0.05)"/>
+    <text x="36" y="92" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" font-weight="700">TARGET ROLES</text>
+    <rect x="30" y="106" width="140" height="26" rx="5" fill="rgba(251, 191, 36, 0.15)" stroke="rgba(251,191,36,0.3)"/>
+    <text x="40" y="123" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Software Engineer</text>
+    <rect x="30" y="140" width="140" height="26" rx="5" fill="rgba(255,255,255,0.02)"/>
+    <text x="40" y="157" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">Data Scientist</text>
+    <rect x="30" y="174" width="140" height="26" rx="5" fill="rgba(255,255,255,0.02)"/>
+    <text x="40" y="191" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">AI / ML Engineer</text>
+
+    <!-- Main Chart / Analytics Area -->
+    <rect x="200" y="60" width="380" height="170" rx="8" fill="#10131b" stroke="rgba(255,255,255,0.05)"/>
+    <text x="220" y="92" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Skill Match &amp; Gap Matrix</text>
+    <text x="510" y="92" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="800">84% MATCH</text>
+
+    <!-- Bars -->
+    <g transform="translate(220, 115)">
+      <!-- Bar 1 -->
+      <text x="0" y="15" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">Java / OOP</text>
+      <rect x="110" y="5" width="220" height="12" rx="6" fill="#1f2430"/>
+      <rect x="110" y="5" width="200" height="12" rx="6" fill="url(#gold)"/>
+      <text x="340" y="15" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10" font-weight="700">92%</text>
+
+      <!-- Bar 2 -->
+      <text x="0" y="42" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">Data Structures</text>
+      <rect x="110" y="32" width="220" height="12" rx="6" fill="#1f2430"/>
+      <rect x="110" y="32" width="175" height="12" rx="6" fill="url(#gold)"/>
+      <text x="340" y="42" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10" font-weight="700">80%</text>
+
+      <!-- Bar 3 -->
+      <text x="0" y="69" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">System Design</text>
+      <rect x="110" y="59" width="220" height="12" rx="6" fill="#1f2430"/>
+      <rect x="110" y="59" width="145" height="12" rx="6" fill="#f59e0b" opacity="0.8"/>
+      <text x="340" y="69" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10" font-weight="700">66%</text>
+    </g>
+
+    <!-- Recommendations panel -->
+    <rect x="200" y="245" width="380" height="115" rx="8" fill="#10131b" stroke="rgba(255,255,255,0.05)"/>
+    <text x="220" y="272" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⚡ AI RECOMMENDATIONS</text>
+    <text x="220" y="296" fill="#d1d5db" font-family="system-ui, sans-serif" font-size="11">• Strengthen Distributed Caching &amp; Microservices architecture</text>
+    <text x="220" y="318" fill="#d1d5db" font-family="system-ui, sans-serif" font-size="11">• Add practical production CI/CD deployment highlights</text>
+    <text x="220" y="340" fill="#10b981" font-family="system-ui, sans-serif" font-size="11">✓ Core algorithmic proficiency fully validated</text>
+  </g>
+</svg>

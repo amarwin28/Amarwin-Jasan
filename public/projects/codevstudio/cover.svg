@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cvBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c12" />
+      <stop offset="50%" stop-color="#111522" />
+      <stop offset="100%" stop-color="#07090d" />
+    </linearGradient>
+    <linearGradient id="cvGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <pattern id="cvGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+    <filter id="cvGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#cvBg)"/>
+  <rect width="800" height="500" fill="url(#cvGrid)"/>
+
+  <!-- Amber Ambient Bloom -->
+  <circle cx="400" cy="240" r="160" fill="#f59e0b" opacity="0.09" filter="url(#cvGlow)"/>
+
+  <!-- Studio Frame -->
+  <g transform="translate(100, 60)">
+    <rect width="600" height="380" rx="16" fill="#0d111a" stroke="rgba(251, 191, 36, 0.25)" stroke-width="1.5"/>
+
+    <!-- Geometric background decorative grid -->
+    <path d="M 50 190 L 550 190 M 300 40 L 300 340" stroke="rgba(255,255,255,0.02)" stroke-width="2"/>
+
+    <!-- Code Brackets Icon Left & Right -->
+    <g transform="translate(170, 110)">
+      <!-- Left Bracket < -->
+      <path d="M 40 40 L 10 70 L 40 100" fill="none" stroke="url(#cvGold)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Central Slash / Logo Mark -->
+      <g transform="translate(65, 30)">
+        <text x="65" y="65" fill="#ffffff" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="44" font-weight="900" letter-spacing="-1">code<tspan fill="url(#cvGold)">V</tspan>studio</text>
+      </g>
+      
+      <!-- Right Bracket > -->
+      <path d="M 220 40 L 250 70 L 220 100" fill="none" stroke="url(#cvGold)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Subtitle Banner -->
+    <text x="300" y="240" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="1.5">DIGITAL DEVELOPMENT INITIATIVE</text>
+    <text x="300" y="265" fill="#6b7280" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Web Applications • Custom Software • Modern Digital Products</text>
+
+    <!-- Tags Row -->
+    <g transform="translate(110, 295)">
+      <rect x="0" y="0" width="110" height="28" rx="14" fill="rgba(251,191,36,0.12)" stroke="rgba(251,191,36,0.3)"/>
+      <text x="55" y="18" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Frontend</text>
+
+      <rect x="130" y="0" width="110" height="28" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+      <text x="185" y="18" fill="#e5e7eb" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">UI / UX Design</text>
+
+      <rect x="260" y="0" width="120" height="28" rx="14" fill="rgba(56,189,248,0.1)" stroke="rgba(56,189,248,0.3)"/>
+      <text x="320" y="18" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Software Tools</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep-navy: #071B35;
+  --color-navy-blue: #102C4E;
+  --color-electric-blue: #087BFF;
+  --color-soft-blue: #DCE7F2;
+  --color-slate-gray: #64748B;
+  
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+@layer base {
+  :root {
+    --deep-navy: #071B35;
+    --navy-blue: #102C4E;
+    --electric-blue: #087BFF;
+    --soft-blue: #DCE7F2;
+    --slate-gray: #64748B;
+    --white: #FFFFFF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #102C4E;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: rgba(8, 123, 255, 0.2);
+    color: #071B35;
+  }
+
+  :focus-visible {
+    outline: 2px solid #087BFF;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #087BFF;
+}
+
+/* Premium utility classes */
+.blue-glow {
+  box-shadow: 0 0 25px -4px rgba(8, 123, 255, 0.25);
+}
+
+.blue-glow-lg {
+  box-shadow: 0 10px 40px -10px rgba(8, 123, 255, 0.35);
+}
+
+.blue-glow-sm {
+  box-shadow: 0 0 15px -3px rgba(8, 123, 255, 0.2);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(7, 27, 53, 0.06), 0 2px 6px -1px rgba(7, 27, 53, 0.03);
+}
+
+.card-shadow-hover {
+  box-shadow: 0 16px 36px -4px rgba(7, 27, 53, 0.12), 0 6px 12px -2px rgba(8, 123, 255, 0.08);
+}
+
