@@ -7,6 +7,7 @@ export const experienceData: Experience[] = [
     role: 'Media & Growth',
     period: '2026 – Present',
     location: 'Remote / On-site',
+    websiteUrl: 'https://www.kromaxzon.in',
     description: "Contributing to the company's media presence, brand development, and growth initiatives.",
     responsibilities: [
       'Media and brand communication.',
@@ -53,6 +54,21 @@ export const experienceData: Experience[] = [
     badge: 'Member'
   },
   {
+    id: 'exp-siph',
+    organization: 'SIPH',
+    role: 'SIPH Intern',
+    period: 'Internship',
+    description: 'Contributed to campus web and mobile application development, conducted student seminars, and coordinated technical symposiums and hackathons.',
+    responsibilities: [
+      'Web developing and institutional digital initiatives.',
+      'Hackathon and symposium coordinator.',
+      'Delivering seminars and technical awareness sessions to students.',
+      'Mobile application development for college systems.'
+    ],
+    isDarkNavy: false,
+    badge: 'Campus Innovation'
+  },
+  {
     id: 'exp-it-boundaries',
     organization: 'IT Boundaries',
     role: 'Flutter App Development Intern',
@@ -67,4 +83,3 @@ export const experienceData: Experience[] = [
     badge: 'Internship'
   }
 ];
-
