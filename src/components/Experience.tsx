@@ -19,8 +19,8 @@ export const Experience: React.FC = () => {
         />
 
         {/* Interactive Horizontal Timeline Bar (Responsive across Desktop and Mobile) */}
-        <div className="mb-10 sm:mb-14">
-          <div className="relative flex items-center justify-between pb-2 sm:pb-4 max-w-4xl mx-auto px-3 sm:px-6">
+        <div className="mb-10 sm:mb-14 overflow-x-auto pb-3 pt-1">
+          <div className="relative flex items-center justify-between pb-2 sm:pb-4 max-w-5xl mx-auto px-3 sm:px-6 min-w-[560px] sm:min-w-0">
             {/* Horizontal Track Line */}
             <div className="absolute top-5 sm:top-6 left-6 right-6 h-0.5 sm:h-1 bg-[#DCE7F2] -translate-y-1/2 z-0" />
             

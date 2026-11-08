@@ -54,6 +54,21 @@ export const experienceData: Experience[] = [
     badge: 'Member'
   },
   {
+    id: 'exp-nanospark',
+    organization: 'NanoSpark',
+    role: 'Web Designer',
+    period: '2026 – Present',
+    description: 'Contributed to collaborative web design and creative digital interfaces, focusing on modern web layouts and interactive 3D web experiences.',
+    responsibilities: [
+      'Web designing and responsive user interfaces.',
+      '3D web creating and immersive interactive elements.',
+      'Visual branding and creative digital design.',
+      'Modern web styling and component prototyping.'
+    ],
+    isDarkNavy: false,
+    badge: 'Design & 3D'
+  },
+  {
     id: 'exp-siph',
     organization: 'SIPH',
     role: 'SIPH Intern',
